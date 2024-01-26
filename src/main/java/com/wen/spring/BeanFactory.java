@@ -1,5 +1,7 @@
 package com.wen.spring;
 
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * bean工厂接口
  */
@@ -9,7 +11,7 @@ public interface BeanFactory {
       * @param beanName 名称
       * @return bean对象
       */
-     Object getBean(String beanName);
+     Object getBean(String beanName) throws Exception;
 
      /**
       *
@@ -22,5 +24,5 @@ public interface BeanFactory {
       *
       * @param beanName 名称
       */
-     void createBean(String beanName);
+     Object createBean(String beanName) throws Exception;
 }
